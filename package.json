@@ -1,0 +1,34 @@
+{
+  "name": "participantpicker",
+  "version": "1.0.0",
+  "description": "Matches participants to given criteria",
+  "main": "index.mjs",
+  "scripts": {
+    "run": "node --experimental-modules index.mjs data/project.json data/respondents_data_test.csv",
+    "test": "ava --verbose",
+    "lint": "eslint *.mjs test/*.mjs"
+  },
+  "author": "Paul Griffin",
+  "license": "ISC",
+  "dependencies": {
+    "awilix": "4.2.2",
+    "fuzzball": "1.3.0",
+    "papaparse": "5.1.0"
+  },
+  "devDependencies": {
+    "ava": "2.4.0",
+    "eslint": "^6.4.0",
+    "esm": "^3.2.25",
+    "sinon": "7.5.0"
+  },
+  "ava": {
+    "require": [
+      "esm"
+    ],
+    "babel": false,
+    "extensions": [
+      "js",
+      "mjs"
+    ]
+  }
+}
